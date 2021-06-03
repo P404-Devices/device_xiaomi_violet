@@ -38,6 +38,7 @@ PRODUCT_ALWAYS_PREOPT_EXTRACTED_APK := true
 # ANT+
 PRODUCT_PACKAGES += \
     AntHalService-Soong \
+    antradio_app \
     com.dsi.ant@1.0.vendor
 
 # Audio
@@ -310,6 +311,10 @@ DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 PRODUCT_ENFORCE_RRO_TARGETS += *
+
+# Platform
+MSMSTEPPE := sm6150
+TARGET_BOARD_PLATFORM := $(MSMSTEPPE)
 
 # Perf QTI component
 PRODUCT_PACKAGES += \

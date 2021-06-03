@@ -25,9 +25,9 @@ INITIAL_COPYRIGHT_YEAR=2020
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-CONQUER_ROOT="${MY_DIR}/../../.."
+p404_ROOT="${MY_DIR}/../../.."
 
-HELPER="${CONQUER_ROOT}/vendor/conquer/build/tools/extract_utils.sh"
+HELPER="${p404_ROOT}/vendor/p404/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -35,7 +35,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE}" "${VENDOR}" "${CONQUER_ROOT}" false
+setup_vendor "${DEVICE}" "${VENDOR}" "${p404_ROOT}" false
 
 # Copyright headers and guards
 write_headers "${DEVICE}"
