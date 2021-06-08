@@ -355,6 +355,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
+# Remove packages
+
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # Screen density
 PRODUCT_AAPT_CONFIG := normal
 PRODUCT_AAPT_PREF_CONFIG := xxhdpi
