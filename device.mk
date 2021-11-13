@@ -201,7 +201,6 @@ PRODUCT_COPY_FILES += \
 # to avoid crashes
 PRODUCT_PACKAGES += \
     telephony-ext \
-    ims-ext-common \
     services-ext
 
 PRODUCT_BOOT_JARS += \
@@ -326,7 +325,8 @@ PRODUCT_PACKAGES += \
 
 # QTI
 TARGET_COMMON_QTI_COMPONENTS := \
-    perf
+    perf \
+    telephony
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/qti_whitelist.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/sysconfig/qti_whitelist.xml \
@@ -334,7 +334,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    libjson \
     libril \
     librilutils \
     librmnetctl
@@ -347,7 +346,6 @@ PRODUCT_PACKAGES += \
     init.recovery.qcom.rc
 
 # Remove packages
-
 PRODUCT_PACKAGES += \
     RemovePackages
 
